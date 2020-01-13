@@ -18,12 +18,27 @@ namespace BeerEncapsulator
 
         public void SetAvalaibleBottles(int bootles)
         {
-            _avalaibleBottles = bootles;
+            if (bootles > 0)
+            {
+                _avalaibleBottles = bootles;
+            }
+            else
+            {
+                _avalaibleBottles = 0;
+            }
         }
 
         public void SetAvalaibleCapsules(int Capsules)
         {
-            _avalaibleCapsules = Capsules;
+            if(Capsules > 0)
+            {
+                _avalaibleCapsules = Capsules;
+            }
+            else
+            {
+                _avalaibleCapsules = 0;
+            }
+           
         }
 
         public void AddBeer(double beerVolume)
