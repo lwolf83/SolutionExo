@@ -52,7 +52,7 @@ namespace BeerEncapsulator
         public int ProduceEncapsulatedBeerBottles(int nbBootles)
         {
             int produceBootles = nbBootles;
-            while (_avalaibleBottles > 0 && _avalaibleCapsules > 0 && _avalaibleBeerVolume > 0.33 && nbBootles > 0)
+            while (_avalaibleBottles > 0 && _avalaibleCapsules > 0 && _avalaibleBeerVolume > 0.33 && produceBootles > 0)
             {
                 _avalaibleBottles--;
                 _avalaibleCapsules--;
