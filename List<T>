@@ -1,0 +1,19 @@
+using System;
+using System.Collections.Generic;
+
+namespace ConsoleApp13
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            Console.WriteLine("Hello World!");
+            var stringList = new List<string> { "avion", "bateau", "chameau", "drakkar" };
+            stringList.RemoveAt(0);
+            stringList.Remove("drakkar");
+            stringList[1] = "piano";
+
+        }
+    }
+}
