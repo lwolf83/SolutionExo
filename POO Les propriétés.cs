@@ -21,24 +21,8 @@ namespace Encapsulation
 
     public class House
     {
-        private List<Room> _rooms;
-        private List<Door> _doors;
-
-        public List<Room> Rooms
-        {
-            get { return _rooms; }
-        }
-
-        public List<Door> Doors
-        {
-            get { return _doors; }
-        }
-
-        public House()
-        {
-            _rooms = new List<Room>();
-            _doors = new List<Door>();
-        }
+        public List<Room> Rooms { get; set; } = new List<Room>();
+        public List<Door> Doors { get; set; } = new List<Door>();
 
         public void AddDoor(Door door)
         {
@@ -53,17 +37,7 @@ namespace Encapsulation
 
     public class Room
     {
-        private List<Door> _doors;
-
-        public List<Door> Doors
-        {
-            get { return _doors; }
-        }
-
-        public Room()
-        {
-            _doors = new List<Door>();
-        }
+        public List<Door> Doors { get; set; } = new List<Door>();
 
         public void AddDoor(Door door)
         {
