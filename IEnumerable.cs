@@ -20,12 +20,8 @@ namespace POO___2._Les_extensions_IEnumerable
             }
 
             double moyenne = tabInt.Where((x) => x < n).Average();
+            Console.WriteLine(string.Join(' ', tabInt));
 
-            foreach(int tempInteger in tabInt)
-            {
-                Console.Write("" + tempInteger + " ");
-            }
-            Console.WriteLine();
             Console.WriteLine("Mean (n < {0}) = {1}", n, moyenne);
 
 
