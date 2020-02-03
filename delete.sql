@@ -1,0 +1,17 @@
+USE SuperMoney;
+GO
+BACKUP DATABASE SuperMoney
+TO DISK = 'E:\\SQLTestDB.bak'
+   WITH FORMAT,
+      MEDIANAME = 'BACKUP',
+      NAME = 'Full Backup of SQLTestDB';
+GO
+
+
+BEGIN TRAN SUPPRESSION
+DELETE FROM logs WHERE [user] = 'hack3r'
+
+-- DELETE TOP(3) FROM logs 
+DELETE FROM logs WHERE id IN (SELECT TOP 3 id FROM logs ORDER BY id DESC)
+
+COMMIT TRAN SUPPRESSION
