@@ -12,9 +12,9 @@ CREATE TABLE [Customer] (
 GO
 
 INSERT INTO [Customer] ([NAME]) VALUES ('fsfdsz')
-INSERT INTO [Customer] ([NAME]) VALUES ('ericz')
+INSERT INTO [Customer] ([NAME]) VALUES ('eric')
 INSERT INTO [Customer] ([NAME]) VALUES ('bobz')
-INSERT INTO [Customer] ([NAME]) VALUES ('samz')
+INSERT INTO [Customer] ([NAME]) VALUES ('sam')
 
 GO
 
