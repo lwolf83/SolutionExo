@@ -1,0 +1,31 @@
+using System;
+
+namespace Geometry
+{
+    public abstract class Polygon
+    {
+        public abstract double Area();
+
+    }
+        public class square : Polygon
+    {
+        public double Size { get; set; }
+
+        public override double Area()
+        {
+            return Size * 4;
+        }
+    }
+
+    public class rectangle : Polygon
+    {
+        public double Width { get; set; }
+        public double Height { get; set; }
+
+        public override double Area()
+        {
+            return (Width + Height) * 2;
+        }
+
+    }
+}
