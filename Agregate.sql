@@ -80,3 +80,9 @@ SELECT Categories.IdCategory, Categories.Name, count(*), SUM(Products.Prix)
 FROM [Purchases] INNER JOIN Products ON Products.IdProduct = Purchases.IdProduct
 INNER Join Categories ON Categories.IdCategory = Products.IdCategory 
 GROUP BY Categories.IdCategory, Categories.Name
+
+
+SELECT YEAR(DatePurchase) AS 'Année', count(*) AS 'NbAchat', SUM(Products.Prix) As 'ValeurAchat'
+FROM [Purchases] INNER JOIN Products ON Products.IdProduct = Purchases.IdProduct
+WHERE YEAR(DatePurchase) = 2019 OR YEAR(DatePurchase) = 2020
+GROUP BY YEAR(DatePurchase)
