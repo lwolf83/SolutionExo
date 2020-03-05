@@ -70,8 +70,8 @@ BEGIN
 	PRINT('AJOUT DES OrderProduct START')
 	DECLARE @nbOrderWithoutOrderProduct INT = 1
 	DECLARE @cpt INT = 1
-	WHILE  @cpt < 4
-	BEGIN
+	--WHILE  @cpt < 4
+	--BEGIN
 		DECLARE @OrderTable TABLE ( order_id INT );
 		DECLARE @ProductTable TABLE ( product_id INT );
 
@@ -82,10 +82,10 @@ BEGIN
 		SELECT TOP(500) product_id FROM [Product] ORDER BY NEWID()
 
 		INSERT INTO OrderProduct ([quantity], [FK_order_id], [FK_product_id]) 
-		SELECT ABS(CHECKSUM(NewId())) % 100, order_id, product_id FROM @OrderTable CROSS JOIN @ProductTable
+		SELECT TOP(@numberOfOrder * 4) ABS(CHECKSUM(NewId())) % 100, order_id, product_id FROM @OrderTable CROSS JOIN @ProductTable
 
 		SET @cpt = @cpt + 1
-	END
+	--END
 	PRINT('AJOUT DES OrderProduct END')
 END
 
