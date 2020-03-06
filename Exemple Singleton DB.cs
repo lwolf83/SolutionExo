@@ -29,10 +29,8 @@ namespace JELListener
         private Database() 
             {
 
-            //    string connectionString = "Data Source=LOCALHOST\\SQLEXPRESS;Initial Catalog=Project2-Banque;Integrated Security=True";
-            string connectionString = "Server=LOCALHOST\\SQLEXPRESS;Database=Project2-Banque;User Id=banque;Password=banque2;MultipleActiveResultSets=true";
-
-
+            string connectionString = "Data Source=LOCALHOST\\SQLEXPRESS;Initial Catalog=Project2-Banque;Integrated Security=True";
+          
             SqlConnection conn = new SqlConnection(connectionString);
 
                  Logger.Debug("Getting Connection ...");
